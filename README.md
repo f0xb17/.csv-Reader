@@ -1,4 +1,4 @@
-# .ini-Reader
+# .csv-Reader
 Class to read .csv-Files without the need of an additional framework from a company. 
 
 This class is randomly used in any of my projects. 
