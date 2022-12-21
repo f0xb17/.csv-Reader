@@ -9,7 +9,7 @@ Please feel free to improve the code.
 
  # Technical details 
  * Fully written in Java
- * Included JUniTests
+ * Included JUnitTests
 
 # Known problems
 * None for now.
