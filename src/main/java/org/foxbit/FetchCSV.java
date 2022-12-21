@@ -1,3 +1,11 @@
+//
+//  FetchCSV.java
+//  Class to read csv Files without additional Frameworks
+//
+//  Created by f0xb17 on 12/21/2022.
+//  Copyright © 2022 f0xb17. All rights reserved.
+//
+
 package org.foxbit;
 
 import java.io.BufferedReader;
