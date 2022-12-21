@@ -10,26 +10,30 @@
 package org.foxbit;
 
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
-public final class JUnitTests {
 
+public final class JUnitTests {
     @Test
-    public void testException() {
-        assertDoesNotThrow(() -> FetchCSV.fetchContent("src/main/java/org/foxbit/test.csv"));
+    public void testExceptions() {
+        try {
+
+            FetchCSV fetchCSV = new FetchCSV();
+            assertDoesNotThrow(() -> fetchCSV.fetchContent());
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 
     @Test
     public void testValues() {
         try {
-            FetchCSV.fetchContent("src/main/java/org/foxbit/test.csv");
 
-            assertEquals("test1", FetchCSV.getValue(1));
-            assertEquals("test2", FetchCSV.getValue(2));
-            assertEquals("test3", FetchCSV.getValue(3));
-            assertNotEquals("test1", FetchCSV.getValue(0));
-            assertNotEquals("test5", FetchCSV.getValue(4));
+            FetchCSV fetchCSV = new FetchCSV();
+            assertEquals("test1", fetchCSV.getValue(1));
+            assertEquals("test2", fetchCSV.getValue(2));
+            assertEquals("test3", fetchCSV.getValue(3));
+            assertNotEquals("test4", fetchCSV.getValue(5));
 
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
